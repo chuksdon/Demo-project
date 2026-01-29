@@ -37,7 +37,7 @@ jobs:
 
       # Save the plan as an artifact to use in apply step
       - name: Upload Terraform plan
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: tfplan
           path: terraform/tfplan
@@ -65,7 +65,7 @@ jobs:
         uses: hashicorp/setup-terraform@v3
 
       - name: Download Terraform plan artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: tfplan
           path: terraform/tfplan
